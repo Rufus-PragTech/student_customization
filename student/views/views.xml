@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+
+    <menuitem 
+      id="menu_student_root" 
+      name="Student" 
+      sequence = "1"
+    />
+
+      <menuitem 
+        id="menu_student_student_root" 
+        name="Student"
+        action = "action_student_student" 
+        parent = "menu_student_root"
+        sequence = "1"
+      />
+
+  </data>
+</odoo>

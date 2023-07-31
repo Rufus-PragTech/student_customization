@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<odoo>
+    <data>
+<!-- (Start) Tree View ====================================================================-->
+        <record id="view_student_student_tree" model="ir.ui.view">
+            <field name="name">student.student.tree</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <tree string="Student Details">
+                    <field name = "name"/>
+                    <field name = "age"/>
+                    <field name = "classs"/>
+                </tree>
+            </field>
+        </record>
+<!-- (End) Tree View ====================================================================-->
+
+
+<!-- (Start) Form View ====================================================================-->
+        <record id="view_student_student_form" model="ir.ui.view">
+            <field name="name">student.student.form</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <form string="Student Details">
+                    <sheet>
+                        <group>
+                            <field name = "name"/>
+                            <field name = "age"/>
+                            <field name = "classs"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<!-- (End) Form View ====================================================================-->
+
+
+<!-- (Start) Model's Action =========================================================-->
+        <record id="action_student_student" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new 'Student' records!
+                </p>
+            </field>
+        </record>
+<!-- (End) Model's Action =========================================================-->
+
+    </data>
+</odoo>
